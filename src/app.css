@@ -1,0 +1,26 @@
+@import '@fontsource/inter';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Write your global styles here, in PostCSS syntax (with optional nesting) */
+
+@layer components {
+	.btn {
+		@apply inline-flex items-center rounded-md border border-transparent transition duration-150 ease-in-out;
+		@apply bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-900 hover:bg-indigo-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:focus-visible:ring-offset-gray-900;
+
+		&.btn-primary {
+			@apply bg-indigo-600 text-sm font-medium text-white hover:bg-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900;
+		}
+
+		&:disabled {
+			@apply cursor-wait opacity-50;
+		}
+
+		svg {
+			@apply mr-2;
+		}
+	}
+}
